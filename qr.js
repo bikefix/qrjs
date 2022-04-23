@@ -5,15 +5,7 @@
  * recognize the public domain the terms of Creative Commons CC0 license
  * apply. In the other words, you can always do what you want.
  */
-(function(root, name, definition) {
-	if (typeof define === 'function' && define.amd) {
-		define([], definition);
-	} else if (typeof module === 'object' && module.exports) {
-		module.exports = definition();
-	} else {
-		root[name] = definition();
-	}
-})(this, 'QRCode', function() {
+
 /* Quick overview: QR code composed of 2D array of modules (a rectangular
  * area that conveys one bit of information); some modules are fixed to help
  * the recognition of the code, and remaining data modules are further divided
@@ -26,7 +18,7 @@
  * ECC level (L/M/Q/H). The number and size (and thus the order of generator
  * polynomial) of ECCs depend to the version and ECC level.
  */
-
+export default function() {
 // per-version information (cf. JIS X 0510:2004 pp. 30--36, 71)
 //
 // [0]: the degree of generator polynomial by ECC levels
@@ -797,4 +789,4 @@ var QRCode = {
 };
 
 return QRCode;
-});
+}
