@@ -1,4 +1,4 @@
-# qr.js: QR code generator in pure Javascript (2011)
+# qrjs: exports a QR code generatored in pure Javascript array of arrays
 
 This is a fairly standalone script for producing QR code on the fly.
 Originally developed for my own interest, the code is fully commented and well-structured.
